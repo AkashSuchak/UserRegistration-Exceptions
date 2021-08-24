@@ -55,7 +55,7 @@ namespace UserRegistrationMSTest
         /// </summary>
         /// <param name="password"></param>
         [TestMethod]
-        [DataRow("asUdga")]
+        [DataRow("asUdg1a")]
         public void Given_InvalidInput_Password_ThrowExceptionCustomMessage_InvalidInput(string password)
         {
             Validation validation = new Validation();
