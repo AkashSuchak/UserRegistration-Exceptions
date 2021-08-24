@@ -50,5 +50,16 @@ namespace UserRegistrationMSTest
             Validation validation = new Validation();
             Assert.ThrowsException<ExceptionHandling>(() => validation.Mobile(mobile));
         }
+        /// <summary>
+        /// Password hav Minimum 8 characters : UC5
+        /// </summary>
+        /// <param name="password"></param>
+        [TestMethod]
+        [DataRow("asdga")]
+        public void Given_InvalidInput_Password_ThrowExceptionCustomMessage_InvalidInput(string password)
+        {
+            Validation validation = new Validation();
+            Assert.ThrowsException<ExceptionHandling>(() => validation.Password(password));
+        }
     }
 }
