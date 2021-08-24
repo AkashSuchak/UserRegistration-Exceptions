@@ -39,5 +39,16 @@ namespace UserRegistrationMSTest
             Validation validation = new Validation();
             Assert.ThrowsException<ExceptionHandling>(() => validation.Email(email));
         }
+        /// <summary>
+        /// Mobile Number : UC4
+        /// </summary>
+        /// <param name="mobile"></param>
+        [TestMethod]
+        [DataRow("9099096400")]
+        public void Given_InvalidInput_MobileNumber_ThrowExceptionCustomMessage_InvalidInput(string mobile)
+        {
+            Validation validation = new Validation();
+            Assert.ThrowsException<ExceptionHandling>(() => validation.Mobile(mobile));
+        }
     }
 }
