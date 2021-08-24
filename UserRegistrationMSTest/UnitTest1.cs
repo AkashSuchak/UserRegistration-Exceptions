@@ -51,11 +51,11 @@ namespace UserRegistrationMSTest
             Assert.ThrowsException<ExceptionHandling>(() => validation.Mobile(mobile));
         }
         /// <summary>
-        /// Password hav Minimum 8 characters,1UpperCase : UC5,6
+        /// Password hav Minimum 8 characters,1UpperCase,1 Number, 1 Special Character : UC5,6,7,8
         /// </summary>
         /// <param name="password"></param>
         [TestMethod]
-        [DataRow("asUdg1a")]
+        [DataRow("asUdg1asd")]
         public void Given_InvalidInput_Password_ThrowExceptionCustomMessage_InvalidInput(string password)
         {
             Validation validation = new Validation();
