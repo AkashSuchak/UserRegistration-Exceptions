@@ -29,11 +29,24 @@ namespace UserRegistrationMSTest
             Assert.ThrowsException<ExceptionHandling>(() => validation.LastName(lastName));
         }
         /// <summary>
-        /// Email : UC3
+        /// Email : UC3,9
         /// </summary>
         /// <param name="email"></param>
         [TestMethod]
-        [DataRow("emailExampleInvalid")]
+        
+        [DataRow("abc")]
+        [DataRow("abc@.com.my")]
+        [DataRow("abc123@gmail.a")]
+        [DataRow("abc123@.com")]
+        [DataRow("abc123@.com.com")]
+        [DataRow(".abc@abc.com")]
+        [DataRow("abc()*@gmail.com")]
+        [DataRow("abc@%*.com")]
+        [DataRow("abc..2002@gmail.com")]
+        [DataRow("abc.@gmail.com")]
+        [DataRow("abc@abc@gmail.com")]
+        [DataRow("abc@gmail.com.1a")]
+        [DataRow("abc@gmail.com.aa.au")]
         public void Given_InvalidInput_Email_ThrowExceptionCustomMessage_InvalidInput(string email)
         {
             Validation validation = new Validation();
