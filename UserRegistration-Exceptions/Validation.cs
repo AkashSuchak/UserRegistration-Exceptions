@@ -11,7 +11,7 @@ namespace UserRegistration_Exceptions
         const string REGEX_NAME = "^[A-Z]{1}[A-Za-z]{2,}";
         const string REGEX_EMAIL_ID = @"^[A-Za-z0-9]+([\.+\-_][A-Za-z0-9]+)*@[a-zA-Z0-9]+\.?[A-Za-z]+\.?[A-Za-z]{2,}$";
         const string REGEX_MOBILE_NUMBER = "^[1-9]{1,2}[ ][1-9]{1}[0-9]{9}$";
-        const string REGEX_PASSWORD = "^[a-zA-Z0-9_!-+@#$]{8,}$";
+        const string REGEX_PASSWORD = "^(?=.*[a-z0-9A-Z])(?=.*[A-Z]).{8,}$";
 
         public void FirstName(string firstName)
         {                       
