@@ -28,5 +28,16 @@ namespace UserRegistrationMSTest
             Validation validation = new Validation();
             Assert.ThrowsException<ExceptionHandling>(() => validation.LastName(lastName));
         }
+        /// <summary>
+        /// Email : UC3
+        /// </summary>
+        /// <param name="email"></param>
+        [TestMethod]
+        [DataRow("emailExampleInvalid")]
+        public void Given_InvalidInput_Email_ThrowExceptionCustomMessage_InvalidInput(string email)
+        {
+            Validation validation = new Validation();
+            Assert.ThrowsException<ExceptionHandling>(() => validation.Email(email));
+        }
     }
 }
