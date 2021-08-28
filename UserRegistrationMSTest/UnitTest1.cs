@@ -14,8 +14,8 @@ namespace UserRegistrationMSTest
         [DataRow("akash")]
         public void Given_InvalidInput_FirstName_ThrowExceptionCustomMessage_InvalidInput(string firstName)
         {
-            Validation validation = new Validation();                        
-            Assert.ThrowsException<ExceptionHandling>(() => validation.FirstName(firstName));
+            UserInput userInput = new UserInput();
+            Assert.ThrowsException<ExceptionHandling>(() => userInput.FirstName(firstName));
         }
         /// <summary>
         /// Last Name UC2
@@ -25,8 +25,8 @@ namespace UserRegistrationMSTest
         [DataRow("suchak")]
         public void Given_InvalidInput_LastName_ThrowExceptionCustomMessage_InvalidInput(string lastName)
         {
-            Validation validation = new Validation();
-            Assert.ThrowsException<ExceptionHandling>(() => validation.LastName(lastName));
+            UserInput userInput = new UserInput();
+            Assert.ThrowsException<ExceptionHandling>(() => userInput.LastName(lastName));
         }
         /// <summary>
         /// Email : UC3,9
@@ -49,8 +49,8 @@ namespace UserRegistrationMSTest
         [DataRow("abc@gmail.com.aa.au")]
         public void Given_InvalidInput_Email_ThrowExceptionCustomMessage_InvalidInput(string email)
         {
-            Validation validation = new Validation();
-            Assert.ThrowsException<ExceptionHandling>(() => validation.Email(email));
+            UserInput userInput = new UserInput();
+            Assert.ThrowsException<ExceptionHandling>(() => userInput.Email(email));
         }
         /// <summary>
         /// Mobile Number : UC4
@@ -60,8 +60,8 @@ namespace UserRegistrationMSTest
         [DataRow("9099096400")]
         public void Given_InvalidInput_MobileNumber_ThrowExceptionCustomMessage_InvalidInput(string mobile)
         {
-            Validation validation = new Validation();
-            Assert.ThrowsException<ExceptionHandling>(() => validation.Mobile(mobile));
+            UserInput userInput = new UserInput();
+            Assert.ThrowsException<ExceptionHandling>(() => userInput.Mobile(mobile));
         }
         /// <summary>
         /// Password hav Minimum 8 characters,1UpperCase,1 Number, 1 Special Character : UC5,6,7,8
@@ -71,8 +71,8 @@ namespace UserRegistrationMSTest
         [DataRow("asUdg1asd")]
         public void Given_InvalidInput_Password_ThrowExceptionCustomMessage_InvalidInput(string password)
         {
-            Validation validation = new Validation();
-            Assert.ThrowsException<ExceptionHandling>(() => validation.Password(password));
+            UserInput userInput = new UserInput();
+            Assert.ThrowsException<ExceptionHandling>(() => userInput.Password(password));
         }
     }
 }
